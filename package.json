@@ -26,6 +26,6 @@
 		"coffee-script": "1.6.3",
 		"async": "0.2.9",
 		"logsmith": "0.0.2",
-		"vboxmanage-path": "1.1.0"
+		"vboxmanage-path": "1.1.1"
 	}
 }
