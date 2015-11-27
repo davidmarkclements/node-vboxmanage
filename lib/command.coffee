@@ -13,10 +13,7 @@ vmp = require 'vboxmanage-path'
 	* @param {function(?err, code, output)} callback
 ###
 exports.exec = do () ->
-	vboxmanage_path = switch
-		when process.platform.match /^win/ then path.join process.env.VBOX_INSTALL_PATH or '', 'VBoxManage.exe'
-		when process.platform.match /^dar/ then '/Applications/VirtualBox.app/Contents/MacOS/VBoxManage'
-		else vmp.sync()
+	vboxmanage_path = vmp.sync()
 		
 	vboxmanage_queue = async.queue (task, callback) ->
 		task.run callback
